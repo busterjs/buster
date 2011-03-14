@@ -19,3 +19,9 @@
 [submodule "node_modules/buster-promise"]
 	path = node_modules/buster-promise
 	url = git@git.cjohansen.no:buster-js/buster-promise.git
+[submodule "node_modules/sinon-buster"]
+	path = node_modules/sinon-buster
+	url = git@git.cjohansen.no:sinon/sinon-buster.git
+[submodule "node_modules/sinon"]
+	path = node_modules/sinon
+	url = git@github.com:cjohansen/Sinon.JS.git

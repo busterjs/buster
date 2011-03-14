@@ -1,5 +1,5 @@
 if (typeof require != "undefined") {
-    var buster = require("../../lib/buster-test");
+    var buster = require("../../lib/buster");
     buster.promise = require("buster-promise");
     var assert = require("assert");
 }
@@ -44,13 +44,14 @@ var spec2 = describe("Another test", function () {
     });
 
     should("fail node assertion", function () {
+        buster.console.warn("This is unsafe");
         assert.ok(false);
     });
 
     shouldEventually("is asynchronous", function () {
         var promise = buster.promise.create(function () {
             setTimeout(function () {
-                console.log("Async");
+                buster.log("Async");
                 promise.resolve();
             }, 1000);
         });

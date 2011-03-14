@@ -19,18 +19,18 @@ buster.testCase("Sample test", {
         this.spy(obj, "meth");
 
         obj.meth();
-        this.console.log("Just called a spy, tihi");
+        buster.log("Just called a spy, tihi");
 
         buster.assert.called(obj.meth);
     },
 
     "//should pass simple assertion": function () {
-        this.console.log("Trying shit out");
+        buster.console.log("Trying shit out");
         buster.assert(true);
     },
 
     "should fail when test throws": function () {
-        this.console.log("Hey, wazzup?");
+        buster.console.warn("Hey, wazzup?");
         throw new Error("Ooops!");
     },
 

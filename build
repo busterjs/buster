@@ -1,0 +1,28 @@
+#!/bin/sh
+
+cd node_modules/sinon
+rm -fr pkg
+ruby -rubygems build
+cd ../..
+
+cat node_modules/buster-core/lib/buster-core.js \
+    node_modules/buster-event-emitter/lib/buster-event-emitter.js \
+    node_modules/buster-format/lib/buster-format.js \
+    node_modules/buster-assert/lib/buster-assert.js \
+    node_modules/buster-promise/lib/buster-promise.js \
+    node_modules/buster-evented-logger/lib/buster-evented-logger.js \
+    node_modules/buster-test/lib/buster-test/stack-filter.js \
+    node_modules/buster-test/lib/buster-test/spec.js \
+    node_modules/buster-test/lib/buster-test/test-case.js \
+    node_modules/buster-test/lib/buster-test/test-runner.js \
+    node_modules/buster-test/lib/buster-test/reporters/html.js \
+    node_modules/buster-test/lib/buster-test.js \
+    node_modules/sinon/pkg/sinon-1.* \
+    node_modules/sinon-buster/lib/sinon-buster.js \
+    lib/buster.js > buster-browser.js
+
+echo "if (buster.stackFilter && buster.stackFilter.filters) {
+    buster.stackFilter.filters.push('buster-browser.js');
+}" >> buster-browser.js
+
+echo "Generated buster-browser.js"

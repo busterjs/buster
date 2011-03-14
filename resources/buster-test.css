@@ -1,0 +1,80 @@
+body.buster-test,
+html.buster-test {
+    margin: 0;
+    padding: 0;
+}
+
+.buster-test,
+body.buster-test {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    padding: 0 12px;
+}
+
+.buster-test h1 {
+    background: #4e4e4e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#787878), to(#4e4e4e));
+    background: -moz-linear-gradient(top center, #787878, #4e4e4e);
+    border-bottom: 4px solid #eeee80;
+    color: #fff;
+    font-weight: normal;
+    margin: 0 -12px .25em;
+    padding: .5em;
+    z-index: 1;
+}
+
+.buster-test h2 {
+    font-weight: normal;
+}
+
+.buster-test ul {
+    margin: 0 0 1em 2em;
+    padding: 0;
+}
+
+.buster-test ul li {
+    list-style: none;
+}
+
+.buster-test li h3 {
+    font-size: 1em;
+    margin: 0 0 .25em;
+    padding: 0;
+}
+
+.buster-test li ul,
+.buster-test li p {
+    font-size: 0.8em;
+    margin: 0 0 0.5em 2em;
+}
+
+.buster-test .success h3 {
+    color: #3c3;
+}
+
+.buster-test .timeout h3,
+.buster-test .failure h3 {
+    color: #c33;
+}
+
+.buster-test .error h3 {
+    color: #cc3;
+}
+
+.buster-test .deferred h3 {
+    color: #33c;
+}
+
+.buster-test .stats ul {
+    margin: 0 0 1em;
+}
+
+.buster-test .stats h2 {
+    margin: 0 0 .25em;
+}
+
+.buster-test .stats li {
+    display: inline;
+    padding-right: 1em;
+}
