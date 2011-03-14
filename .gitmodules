@@ -1,0 +1,21 @@
+[submodule "node_modules/buster-assert"]
+	path = node_modules/buster-assert
+	url = git@git.cjohansen.no:buster-js/buster-assert.git
+[submodule "node_modules/buster-format"]
+	path = node_modules/buster-format
+	url = git@git.cjohansen.no:buster-js/buster-format.git
+[submodule "node_modules/buster-core"]
+	path = node_modules/buster-core
+	url = git@git.cjohansen.no:buster-js/buster-core.git
+[submodule "node_modules/buster-event-emitter"]
+	path = node_modules/buster-event-emitter
+	url = git@git.cjohansen.no:buster-js/buster-event-emitter.git
+[submodule "node_modules/buster-evented-logger"]
+	path = node_modules/buster-evented-logger
+	url = git@git.cjohansen.no:buster-js/buster-evented-logger.git
+[submodule "node_modules/buster-test"]
+	path = node_modules/buster-test
+	url = git@git.cjohansen.no:buster-js/buster-test.git
+[submodule "node_modules/buster-promise"]
+	path = node_modules/buster-promise
+	url = git@git.cjohansen.no:buster-js/buster-promise.git

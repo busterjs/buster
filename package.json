@@ -1,0 +1,20 @@
+{
+    "name": "buster",
+    "version": "0.1.0",
+    "main": "./lib/buster",
+    "description": "Buster.JS JavaScript Test framework"
+    "homepage": "http://busterjs.org/",
+    "contributors": [{
+        "name": "August Lilleaas",
+        "email": "august.lilleaas@gmail.com",
+        "url": "http://augustl.com"
+    }, {
+        "name": "Christian Johansen",
+        "email": "christian@cjohansen.no",
+        "url": "http://cjohansen.no"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "http://git.gitorious.org/buster-js/buster.git"
+    }
+}
