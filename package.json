@@ -2,7 +2,7 @@
     "name": "buster",
     "version": "0.1.0",
     "main": "./lib/buster",
-    "description": "Buster.JS JavaScript Test framework"
+    "description": "Buster.JS JavaScript Test framework",
     "homepage": "http://busterjs.org/",
     "contributors": [{
         "name": "August Lilleaas",
