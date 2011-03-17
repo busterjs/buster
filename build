@@ -16,6 +16,7 @@ cat node_modules/buster-core/lib/buster-core.js \
     node_modules/buster-test/lib/buster-test/test-case.js \
     node_modules/buster-test/lib/buster-test/test-runner.js \
     node_modules/buster-test/lib/buster-test/reporters/html.js \
+    node_modules/buster-test/lib/buster-test/test.js \
     node_modules/buster-test/lib/buster-test.js \
     node_modules/sinon/pkg/sinon-1.* \
     node_modules/sinon-buster/lib/sinon-buster.js \
