@@ -38,6 +38,12 @@ buster.testCase("Sample test", {
         buster.assert.equals("Something", "Other");
     },
 
+    "should fail after timing out": function () {
+        setTimeout(function () {
+            throw new Error("Ah, crap!");
+        }, 50);
+    },
+
     "look ma, I'm asynchronous": function () {
         var promise = buster.promise.create(function () {
             setTimeout(function () {
