@@ -59,8 +59,10 @@ buster.testCase("Sample test", {
         buster.assert(true);
 
         setTimeout(function () {
-            //done();
-        }, 1000);
+            buster.log("Failing assertion asynchronously");
+            buster.assert(false);
+            done();
+        }, 50);
     },
 
     "context": {
