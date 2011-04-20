@@ -5,10 +5,11 @@ if (typeof require != "undefined") {
 }
 
 buster.spec.expose();
+var assertThat = buster.assert.that;
 
 var spec = describe("Sample spec", function () {
     should("pass simple assertion", function () {
-        buster.assert(true);
+        assertThat(true).isTrue();
     });
 
     should("fail when test throws", function () {
@@ -16,12 +17,12 @@ var spec = describe("Sample spec", function () {
     });
 
     should("fail test", function () {
-        buster.assert.equals("Something", "Other");
+        assertThat("Something").equals("Other");
     });
 
     describe("nested", function () {
         should("do it", function () {
-            buster.assert(true);
+            assertThat(true).isTrue();
         });
     });
 });
@@ -32,11 +33,11 @@ var spec2 = describe("Another test", function () {
     });
 
     should("passes simple assertion", function () {
-        buster.assert.equals(42, this.value);
+        assertThat(this.value).equals(42);
     });
 
     should("passes true assertion", function () {
-        buster.assert(true);
+        assertThat(true).isTrue();
     });
 
     should("passes node assertion", function () {
@@ -60,17 +61,17 @@ var spec2 = describe("Another test", function () {
     }),
 
     should("puts the lotion on its skin or else it gets the hose again", function () {
-        buster.assert(true);
+        assertThat(true).isTrue();
     });
 });
 
 var spec3 = describe("Third one", function () {
-    should("should do #1", function () { buster.assert(true); });
-    should("should do #2", function () { buster.assert(true); });
-    should("should do #3", function () { buster.assert(true); });
-    should("should do #4", function () { buster.assert(true); });
-    should("should do #5", function () { buster.assert(true); });
-    should("should do #6", function () { buster.assert(true); });
-    should("should do #7", function () { buster.assert(true); });
-    should("should do #8", function () { buster.assert(true); });
+    should("should do #1", function () { assertThat(true).isTrue(); });
+    should("should do #2", function () { assertThat(true).isTrue(); });
+    should("should do #3", function () { assertThat(true).isTrue(); });
+    should("should do #4", function () { assertThat(true).isTrue(); });
+    should("should do #5", function () { assertThat(true).isTrue(); });
+    should("should do #6", function () { assertThat(true).isTrue(); });
+    should("should do #7", function () { assertThat(true).isTrue(); });
+    should("should do #8", function () { assertThat(true).isTrue(); });
 });
