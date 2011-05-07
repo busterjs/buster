@@ -1,4 +1,4 @@
-body.buster-test,
+.buster-test,
 html.buster-test {
     margin: 0;
     padding: 0;
@@ -6,6 +6,7 @@ html.buster-test {
 
 .buster-test,
 body.buster-test {
+    font-family: Georgia, Times, serif;
     font-size: 16px;
     padding: 0 12px;
 }
@@ -84,12 +85,6 @@ body.buster-test {
 .buster-test .stats li {
     display: inline;
     padding-right: 1em;
-}
-
-body.buster-test {
-    font-family: Georgia, Times, serif;
-    font-size: 100%;
-    margin: 0 auto;
 }
 
 .buster-test p,
