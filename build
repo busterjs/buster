@@ -9,6 +9,7 @@ cat node_modules/buster-core/lib/buster-core.js \
     node_modules/buster-core/lib/buster-event-emitter.js \
     node_modules/buster-format/lib/buster-format.js \
     node_modules/buster-assert/lib/buster-assert.js \
+    node_modules/buster-assert/lib/buster-assert/assert-that.js \
     node_modules/buster-promise/lib/buster-promise.js \
     node_modules/buster-evented-logger/lib/buster-evented-logger.js \
     node_modules/buster-test/lib/buster-test/stack-filter.js \
@@ -20,10 +21,10 @@ cat node_modules/buster-core/lib/buster-core.js \
     node_modules/buster-test/lib/buster-test.js \
     node_modules/sinon/pkg/sinon-1.* \
     node_modules/sinon-buster/lib/sinon-buster.js \
-    lib/buster.js > buster-browser.js
+    lib/buster.js > buster-test.js
 
 echo "if (buster.stackFilter && buster.stackFilter.filters) {
-    buster.stackFilter.filters.push('buster-browser.js');
-}" >> buster-browser.js
+    buster.stackFilter.filters.push('buster-test.js');
+}" >> buster-test.js
 
-echo "Generated buster-browser.js"
+echo "Generated buster-test.js"

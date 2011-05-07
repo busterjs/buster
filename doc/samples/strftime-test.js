@@ -1,5 +1,6 @@
 if (typeof require != "undefined") {
     var buster = require("../../lib/buster");
+    require("./strftime");
 }
 
 var assert = buster.assert;
