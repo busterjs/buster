@@ -30,7 +30,7 @@ buster.testCase("Sample test", {
     },
 
     "should fail when test throws": function () {
-        buster.console.warn("Hey, wazzup?");
+        buster.console.warn("This gonna burn");
         throw new Error("Ooops!");
     },
 
@@ -57,6 +57,7 @@ buster.testCase("Sample test", {
 
     "look ma, I'm implicitly asynchronous": function (done) {
         buster.assert(true);
+        buster.console.error("This is not good");
 
         setTimeout(function () {
             buster.log("Failing assertion asynchronously");
