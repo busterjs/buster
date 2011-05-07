@@ -23,14 +23,14 @@ function buildBuster(sinonVersion) {
 
     function finish() {
         if (read == fileNames.length) {
-            var fileName = path.resolve(cwd, "buster-test.js");
+            var fileName = path.resolve(cwd, "resources/buster-test.js");
 
             fs.writeFile(fileName, files.join("\n"), function (err) {
                 if (err) {
-                    console.log("Failed building buster-test.js: " + err.message);
+                    console.log("Failed building resources/buster-test.js: " + err.message);
                 } else {
                     var kb = Math.floor(files.join("\n").length / 10.24) / 100;
-                    console.log("Built buster-test.js (" + kb + "kB)");
+                    console.log("Built resources/buster-test.js (" + kb + "kB)");
                 }
             });
         }
