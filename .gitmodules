@@ -1,27 +1,27 @@
 [submodule "node_modules/buster-assert"]
 	path = node_modules/buster-assert
-	url = git@gitorious.org:buster/buster-assert.git
+	url = git://gitorious.org/buster/buster-assert.git
 [submodule "node_modules/buster-format"]
 	path = node_modules/buster-format
-	url = git@gitorious.org:buster/buster-format.git
+	url = git://gitorious.org/buster/buster-format.git
 [submodule "node_modules/buster-core"]
 	path = node_modules/buster-core
-	url = git@gitorious.org:buster/buster-core.git
+	url = git://gitorious.org/buster/buster-core.git
 [submodule "node_modules/buster-event-emitter"]
 	path = node_modules/buster-event-emitter
-	url = git@gitorious.org:buster/buster-event-emitter.git
+	url = git://gitorious.org/buster/buster-event-emitter.git
 [submodule "node_modules/buster-evented-logger"]
 	path = node_modules/buster-evented-logger
-	url = git@gitorious.org:buster/buster-evented-logger.git
+	url = git://gitorious.org/buster/buster-evented-logger.git
 [submodule "node_modules/buster-test"]
 	path = node_modules/buster-test
-	url = git@gitorious.org:buster/buster-test.git
+	url = git://gitorious.org/buster/buster-test.git
 [submodule "node_modules/buster-promise"]
 	path = node_modules/buster-promise
-	url = git@gitorious.org:buster/buster-promise.git
+	url = git://gitorious.org/buster/buster-promise.git
 [submodule "node_modules/sinon-buster"]
 	path = node_modules/sinon-buster
-	url = git@gitorious.org:buster/sinon-buster.git
+	url = git://gitorious.org/buster/sinon-buster.git
 [submodule "node_modules/sinon"]
 	path = node_modules/sinon
 	url = git@github.com:cjohansen/Sinon.JS.git
