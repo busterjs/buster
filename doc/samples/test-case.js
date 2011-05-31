@@ -80,6 +80,20 @@ buster.testCase("Sample test", {
                 buster.assert.equals(2, this.a);
             }
         }
+    },
+
+    "http stuff": {
+        requiresSupportForAny: {
+            "node http client": function () {
+                return typeof require == "undefined";
+            },
+
+            "another thing": false
+        },
+
+        "should do it": function () {
+            buster.assert(false);
+        }
     }
 });
 
