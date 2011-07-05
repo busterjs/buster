@@ -1,6 +1,6 @@
 [submodule "node_modules/buster-assertions"]
 	path = node_modules/buster-assertions
-	url = git://gitorious.org/buster/buster-assert.git
+	url = git@gitorious.org:buster/buster-assert.git
 [submodule "node_modules/buster-format"]
 	path = node_modules/buster-format
 	url = git://gitorious.org/buster/buster-format.git
