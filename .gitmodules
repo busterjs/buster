@@ -25,3 +25,6 @@
 [submodule "node_modules/sinon"]
 	path = node_modules/sinon
 	url = https://github.com/cjohansen/Sinon.JS.git
+[submodule "node_modules/buster-module-loader"]
+	path = node_modules/buster-module-loader
+	url = git://gitorious.org/buster/buster-module-loader.git
