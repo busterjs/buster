@@ -16,5 +16,12 @@
     "repository": {
         "type": "git",
         "url": "http://git.gitorious.org/buster-js/buster.git"
+    },
+    "dependencies": {
+        "buster-core": "*",
+        "buster-test": "*",
+        "buster-assertions": "*",
+        "buster-format": "*",
+        "buster-evented-logger": "*"
     }
 }
