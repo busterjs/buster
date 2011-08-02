@@ -22,6 +22,7 @@
         "buster-test": "*",
         "buster-assertions": "*",
         "buster-format": "*",
-        "buster-evented-logger": "*"
+        "buster-evented-logger": "*",
+        "sinon-buster": "*"
     }
 }
