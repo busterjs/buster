@@ -1,9 +1,10 @@
 {
     "name": "buster",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "main": "./lib/buster",
-    "description": "Buster.JS JavaScript Test framework",
+    "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
+    "author": { "name": "August Lilleaas and Christian Johansen" },
     "contributors": [{
         "name": "August Lilleaas",
         "email": "august.lilleaas@gmail.com",
@@ -15,14 +16,14 @@
     }],
     "repository": {
         "type": "git",
-        "url": "http://git.gitorious.org/buster-js/buster.git"
+        "url": "git://gitorious.org/buster/buster.git"
     },
     "dependencies": {
-        "buster-core": "*",
-        "buster-test": "*",
-        "buster-assertions": "*",
-        "buster-format": "*",
-        "buster-evented-logger": "*",
-        "sinon-buster": "*"
+        "buster-core": "~>0.3",
+        "buster-test": "~>0.2",
+        "buster-assertions": "~>0.6",
+        "buster-format": "~>0.4",
+        "buster-evented-logger": "~>0.3",
+        "sinon-buster": "~>0.3.0"
     }
 }
