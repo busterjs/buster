@@ -18,6 +18,12 @@
         "type": "git",
         "url": "git://gitorious.org/buster/buster.git"
     },
+    "bin": {
+        "buster": "./bin/buster",
+        "buster-test": "./bin/buster-test",
+        "buster-server": "./bin/buster-server",
+        "buster-autotest": "./bin/buster-autotest"
+    },
     "dependencies": {
         "buster-core": "~>0.3",
         "buster-test": "~>0.2",
