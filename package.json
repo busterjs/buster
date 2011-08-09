@@ -24,6 +24,7 @@
         "buster-assertions": "~>0.6",
         "buster-format": "~>0.4",
         "buster-evented-logger": "~>0.3",
+        "buster-test-cli": "~>0.1",
         "sinon-buster": "~>0.3.0"
     }
 }

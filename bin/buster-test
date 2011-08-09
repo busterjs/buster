@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+require("buster-test-cli").cli.test.create().run(process.argv.slice(2));

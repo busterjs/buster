@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+var watchTree = require("watch-tree").watchTree;
+var spawn = require("child_process").spawn;
+var sys = require("sys");
+
+function throttle(ms, callback, thisP) {
+    var timer;
+
+    return function () {
+        var args = arguments;
+        clearTimeout(timer);
+
+        timer = setTimeout(function () {
+            callback.apply(thisP, args);
+        }, ms);
+    };
+}
+
+var running = false;
+
+function run() {
+    if (running) return;
+
+    var now = new Date();
+    console.log("\n");
+    console.log(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + " Running tests");
+    console.log("``````````````````````");
+    running = true;
+
+    var test = spawn("buster-test", process.argv.slice(2));
+
+    var cancel = throttle(250, function () {
+        running = false;
+        test.kill();
+    });
+
+    function onData(data) {
+        sys.print(data.toString());
+        cancel();
+    }
+
+    test.stdout.on("data", onData);
+    test.stderr.on("data", onData);
+
+    test.stderr.on("exit", function () {
+        console.log("\n\n\n");
+        running = false;
+    });
+}
+
+console.log("Watching", process.cwd());
+var r = throttle(10, run);
+
+watchTree(process.cwd(), {
+    exclude: [/\/\./, "#", "node_modules"]
+}, function (event) {
+    // New directories is no reason to run tests
+    if (event.isCreate() && event.isDirectory()) {
+        return;
+    }
+
+    r();
+});
