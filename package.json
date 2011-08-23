@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -25,12 +25,12 @@
         "buster-autotest": "./bin/buster-autotest"
     },
     "dependencies": {
-        "buster-core": "~>0.3",
-        "buster-test": "~>0.2",
-        "buster-assertions": "~>0.6",
-        "buster-format": "~>0.4",
-        "buster-evented-logger": "~>0.3",
-        "buster-test-cli": "~>0.1",
-        "sinon-buster": "~>0.3.0"
+        "buster-core": "~0.3",
+        "buster-test": "~0.2",
+        "buster-assertions": "~0.6",
+        "buster-format": "~0.4",
+        "buster-evented-logger": "~0.3",
+        "buster-test-cli": "~0.1",
+        "sinon-buster": "~0.3.0"
     }
 }
