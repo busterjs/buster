@@ -56,6 +56,7 @@ function buildBuster(sinonVersion) {
         "buster-test/lib/buster-test",
         "sinon/pkg/sinon-" + sinonVersion,
         "sinon-buster/lib/sinon-buster",
+        "lib/buster/buster-wiring.js",
         "lib/buster.js"];
 
     fileNames.forEach(function (fileName, i) {
