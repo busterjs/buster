@@ -1,14 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env sh
 
-var util = require("util");
-var spawn = require("child_process").spawn;
-var command = spawn("buster-" + process.argv[2], process.argv.slice(3));
-var sys = require("sys");
-
-command.stdout.on("data", function (data) {
-    sys.print(data.toString());
-});
-
-command.stderr.on("data", function (data) {
-    console.error(data.toString());
-});
+cmd="buster-$1"
+hash $cmd &> /dev/null
+if [ $? -eq 1 ]; then
+    echo "Buster command '$1' does not exist."
+else
+    $cmd
+fi
