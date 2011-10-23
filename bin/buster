@@ -13,5 +13,6 @@ hash $cmd &> /dev/null
 if [ $? -eq 1 ]; then
     echo "Buster command '$1' does not exist."
 else
-    $cmd
+    shift
+    $cmd $*
 fi
