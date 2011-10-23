@@ -1,5 +1,13 @@
 #!/usr/bin/env sh
 
+# When running 'buster'
+if [ -z $1 ]; then
+    echo "Perhaps you meant 'buster test'?"
+    echo "This text should provide useful information."
+    exit
+fi
+
+# When running 'buster-foo'
 cmd="buster-$1"
 hash $cmd &> /dev/null
 if [ $? -eq 1 ]; then
