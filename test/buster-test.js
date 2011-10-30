@@ -22,5 +22,11 @@ buster.testCase("Buster integration test", {
         });
 
         runner.runSuite([testCase]);
+    },
+
+    "should add console to runner": function () {
+        var runner = buster.testRunner.create();
+
+        assert.same(runner.console, buster.console);
     }
 });
