@@ -28,5 +28,22 @@ buster.testCase("Buster integration test", {
         var runner = buster.testRunner.create();
 
         assert.same(runner.console, buster.console);
+    },
+
+    "should expose console.log as this.log in tests": function (done) {
+        this.spy(buster.console, "log");
+        var runner = buster.testRunner.create();
+
+        runner.on("suite:end", function (results) {
+            assert.calledOnce(buster.console.log);
+            assert.calledWith(buster.console.log, "Hey man");
+            done();
+        });
+
+        runner.runSuite([buster.testCase("Sinon assertion count", {
+            "should count two assertions": function () {
+                this.log("Hey man");
+            }
+        })]);
     }
 });
