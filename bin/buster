@@ -1,18 +1,37 @@
-#!/usr/bin/env sh
+#!/usr/bin/env node
 
-# When running 'buster'
-if [ -z $1 ]; then
-    echo "Perhaps you meant 'buster test'?"
-    echo "This text should provide useful information."
-    exit
-fi
+var fs = require("fs");
+var childProcess = require("child_process");
 
-# When running 'buster-foo'
-cmd="buster-$1"
-hash $cmd &> /dev/null
-if [ $? -eq 1 ]; then
-    echo "Buster command '$1' does not exist."
-else
-    shift
-    $cmd $*
-fi
+var argv = Array.prototype.slice.call(process.argv).slice(2)
+var cmd = argv.shift();
+
+var cmdExists = childProcess.exec(
+    "command -v buster-" + cmd,
+    {env: process.env},
+    function (error, stdout, stderr) {
+        if (error) {
+            if (error.code == 1) {
+                console.log("Buster command '" + cmd + "' does not exist.");
+            } else {
+                console.log("Unknown error occurred when running wrapper script.");
+                console.log("Try using buster-server, buster-test etc directly.");
+            }
+        } else {
+            var mod = stdout.split("\n")[0];
+
+            var run = childProcess.spawn(mod, argv, {env: process.env, setsid: true});
+            run.stdout.on('data', function (data) {
+                process.stdout.write(data);
+            });
+
+            run.stderr.on('data', function (data) {
+                process.stderr.write(data);
+            });
+
+            run.on('exit', function (code) {
+                process.exit(code);
+            });
+        }
+    }
+);
