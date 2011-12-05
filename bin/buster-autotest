@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var watchTree = require("watch-tree").watchTree;
 var spawn = require("child_process").spawn;
-var sys = require("sys");
+var util = require("util");
 
 function throttle(ms, callback, thisP) {
     var timer;
@@ -35,7 +35,7 @@ function run() {
     });
 
     function onData(data) {
-        sys.print(data.toString());
+        util.print(data.toString());
         cancel();
     }
 
