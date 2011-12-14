@@ -31,6 +31,7 @@
         "buster-format": "~0.5",
         "buster-evented-logger": "~0.4",
         "buster-test-cli": "~0.3",
+        "sinon": "1.2.0",
         "sinon-buster": "~0.4",
         "buster-static": "~0.2"
     }
