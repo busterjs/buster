@@ -45,5 +45,23 @@ buster.testCase("Buster integration test", {
                 this.log("Hey man");
             }
         })]);
+    },
+
+    "should fail when no exception": function () {
+        this.stub(buster.assertions, "emit");
+
+        try {
+            buster.assertions.throwOnFailure = true;
+            assert.exception(function () {});
+            throw new Error("Didn't throw");
+        } catch (e) {
+            buster.assertions.emit.restore();
+            refute.match(e.message, "Didn't throw");
+            refute.match(e.message, "toString");
+        } finally {
+            if (buster.assertions.emit.restore) {
+                buster.assertions.emit.restore();
+            }
+        }
     }
 });
