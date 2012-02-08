@@ -1,6 +1,6 @@
 if (typeof require != "undefined") {
     var buster = require("../../lib/buster");
-    buster.promise = require("buster-promise");
+    var when = require("when");
 }
 
 buster.testCase("Sample test", {
@@ -45,14 +45,14 @@ buster.testCase("Sample test", {
     },
 
     "look ma, I'm asynchronous": function () {
-        var promise = buster.promise.create(function () {
-            setTimeout(function () {
-                buster.assert(true);
-                promise.resolve();
-            }, 200);
-        });
+        var deferred = when.defer();
 
-        return promise;
+        setTimeout(function () {
+            buster.assert(true);
+            deferred.resolver.resolve();
+        }, 200);
+
+        return deferred.promise;
     },
 
     "look ma, I'm implicitly asynchronous": function (done) {

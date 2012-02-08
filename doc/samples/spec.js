@@ -1,6 +1,6 @@
 if (typeof require != "undefined") {
     var buster = require("../../lib/buster");
-    buster.promise = require("buster-promise");
+    var when = require("when");
     var assert = require("assert");
 }
 
@@ -50,14 +50,14 @@ var spec2 = describe("Another test", function () {
     });
 
     shouldEventually("is asynchronous", function () {
-        var promise = buster.promise.create(function () {
-            setTimeout(function () {
-                buster.log("Async");
-                promise.resolve();
-            }, 1000);
-        });
+        var deferred = when.defer();
 
-        return promise;
+        setTimeout(function () {
+            buster.log("Async");
+            deferred.resolver.resolve();
+        }, 1000);
+
+        return deferred.promise;
     }),
 
     should("puts the lotion on its skin or else it gets the hose again", function () {
