@@ -6,7 +6,7 @@ var childProcess = require("child_process");
 var argv = Array.prototype.slice.call(process.argv).slice(2)
 var cmd = argv.shift();
 
-var cmdExists = childProcess.exec(
+childProcess.exec(
     "command -v buster-" + cmd,
     {env: process.env},
     function (error, stdout, stderr) {
