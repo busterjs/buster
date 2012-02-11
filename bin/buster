@@ -7,6 +7,8 @@ var argv = Array.prototype.slice.call(process.argv).slice(2)
 
 if (argv.length == 0 || argv[0] == "--help" || argv[0] == "-h") {
     printHelp();
+} else if (argv[0] == "--version" || argv[0] == "-v") {
+    printVersions();
 } else {
     var cmd = argv.shift();
     if (/^\-/.test(cmd)) {
@@ -17,13 +19,17 @@ if (argv.length == 0 || argv[0] == "--help" || argv[0] == "-h") {
 }
 
 function printHelp() {
-    console.log("Usage: buster <command> [args]");
+    console.log("Usage: buster [--version,-v] <command> [<args>]");
     console.log();
     console.log("The most commonly used Buster.JS commands are:");
     console.log("     test   Run tests with Buster.JS");
     console.log("   server   Manually start the server for browser capturing");
     console.log(" autotest   Like 'test', but automatically re-run tests when files change");
     console.log("   static   An alternative static HTML page based runner");
+}
+
+function printVersions() {
+    console.log("Buster.JS version 0.3 beta1");
 }
 
 function runBusterCmd() {
