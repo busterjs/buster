@@ -42,7 +42,6 @@ function buildBuster(sinonVersion) {
         "buster-format/lib/buster-format",
         "buster-assertions/lib/buster-assertions",
         "buster-assertions/lib/buster-assertions/expect",
-        "buster-promise/lib/buster-promise",
         "buster-evented-logger/lib/buster-evented-logger",
         "buster-test/lib/buster-test/stack-filter",
         "buster-test/lib/buster-test/spec",
