@@ -36,7 +36,7 @@
         "buster-static": ">=0.3"
     },
     "devDependencies": {
-        "when": "https://github.com/cujojs/when/tarball/v0.11.1",
+        "when": "https://github.com/cujojs/when/tarball/1.0.2",
         "uglify-js": "~1.2.5"
     }
 }
