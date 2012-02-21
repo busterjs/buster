@@ -29,7 +29,8 @@ function printHelp() {
 }
 
 function printVersions() {
-    console.log("Buster.JS version 0.4.1 beta2");
+    var version = JSON.parse(fs.readFileSync(__dirname + "/../package.json")).version;
+    console.log("Buster.JS version " + version + " beta2");
 }
 
 function runBusterCmd() {
