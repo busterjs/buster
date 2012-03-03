@@ -22,7 +22,8 @@
         "buster": "./bin/buster",
         "buster-test": "./bin/buster-test",
         "buster-server": "./bin/buster-server",
-        "buster-autotest": "./bin/buster-autotest"
+        "buster-autotest": "./bin/buster-autotest",
+        "buster-static": "./bin/buster-static"
     },
     "dependencies": {
         "buster-core": ">=0.5.1",
