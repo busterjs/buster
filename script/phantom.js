@@ -1,4 +1,7 @@
-if (phantom.state.length === 0) {
+if(!phantom.state) {
     phantom.state = "buster";
-    phantom.open("http://localhost:1111/capture");
+    var page = new WebPage();
+    page.open("http://localhost:1111/capture", function(status) {
+          console.log(status);
+        });
 }
