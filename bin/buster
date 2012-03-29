@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require("fs");
+var Path = require("path");
 var childProcess = require("child_process");
 
 var argv = Array.prototype.slice.call(process.argv).slice(2)
@@ -35,7 +36,7 @@ function printVersions() {
 
 function runBusterCmd() {
     childProcess.exec(
-        "command -v buster-" + cmd,
+        "command -v " + Path.join( __dirname, "buster-" + cmd),
         {env: process.env},
         function (error, stdout, stderr) {
             if (error) {
