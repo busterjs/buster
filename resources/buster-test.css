@@ -82,6 +82,14 @@ body.buster-test {
     margin: 0 0 .25em;
 }
 
+.buster-test .stats.success h2 {
+    color: #3c3;
+}
+
+.buster-test .stats.failure h2 {
+    color: #c33;
+}
+
 .buster-test .stats li {
     display: inline;
     padding-right: 1em;
