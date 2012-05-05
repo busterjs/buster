@@ -39,6 +39,7 @@
     },
     "devDependencies": {
         "when": "https://github.com/cujojs/when/tarball/1.0.2",
-        "uglify-js": "~1.2.5"
+        "uglify-js": "~1.2.5",
+        "buster-util": ">=0.5"
     }
 }
