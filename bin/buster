@@ -33,7 +33,7 @@ function printVersions() {
     console.log("Buster.JS version " + version + " beta3");
 }
 
-function runBusterCmd() {
+function runBusterCmd(cmd) {
     childProcess.exec(
         "command -v buster-" + cmd,
         {env: process.env},
