@@ -248,6 +248,18 @@
             wire.ready({ captureConsole: true });
 
             assert(B.captureConsole.calledOnce);
+       },
+
+        "should defer creating test runner": function () {
+            var runSuite = sinon.spy();
+            var wire = B.wire.testRunner(function () {
+                return { on: function () {}, runSuite: runSuite };
+            });
+
+            wire.run();
+            wire.ready({});
+
+            assert(runSuite.calledOnce);
        }
     });
 
