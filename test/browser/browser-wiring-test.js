@@ -127,6 +127,15 @@
             assertEquals(this.runner.runSuite.args[0][0].length, 2);
         },
 
+        "should copy config properties to test runner": function () {
+            var wire = B.wire.testRunner(this.runner);
+
+            wire.ready({ timeout: 1200 });
+            wire.run();
+
+            assertEquals(this.runner.timeout, 1200);
+        },
+
         "should run parsable context when ready": function () {
             var wire = B.wire.testRunner(this.runner);
             var context = { name: "Parsed", tests: [{ name: "Yay" }], contexts: [] };
