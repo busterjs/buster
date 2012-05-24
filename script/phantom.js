@@ -1,8 +1,14 @@
+var system = require('system'),
+    captureUrl = 'http://localhost:1111/capture/';
+if (system.args.length==2) {
+    captureUrl = system.args[1];
+}
+
 phantom.silent = false;
 
 var page = new WebPage();
 
-page.open("http://localhost:1111/capture", function(status) {
+page.open(captureUrl, function(status) {
   if(!phantom.silent){
     console.log(status);
 
