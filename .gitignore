@@ -1,2 +1,3 @@
-resources/buster-test.js
+*.log
 node_modules
+resources/buster-test.js
