@@ -1,4 +1,5 @@
+*.log
 .gitignore
 .npmignore
-node_modules
 doc
+node_modules
