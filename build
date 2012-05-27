@@ -72,7 +72,7 @@ var fileNames = [
     "sinon/lib/sinon/util/fake_timers.js",
     "sinon/lib/sinon/util/fake_server.js",
     "sinon/lib/sinon/util/fake_server_with_clock.js",
-    "sinon-buster/lib/sinon-buster",
+    "buster-sinon/lib/buster-sinon",
     "lib/buster/buster-wiring.js",
     "lib/buster.js"];
 
