@@ -1,2 +1,19 @@
 #!/usr/bin/env node
-require("buster-test-cli").cli.test.create().run(process.argv.slice(2));
+var testCli = require("buster-test-cli");
+
+process.on("uncaughtException", function (err) {
+    console.log(err.stack);
+});
+
+testCli.create(process.stdout, process.stderr, {
+    missionStatement: "Run Buster.JS tests on node, in browsers, or both",
+    description: [
+        "Usage: buster-test [options] [filters]\n",
+        "Optionally provide a test name filter to run a selection of tests:",
+        "`buster-test configuration` runs all contexts/tests with the word",
+        "'configuration' in their name."
+    ].join("\n"),
+    environmentVariable: "BUSTER_TEST_OPT",
+    runners: testCli.runners
+}).run(process.argv.slice(2));
+

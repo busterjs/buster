@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-require("buster-test-cli").cli.server.create().run(process.argv.slice(2));
+
+require("buster-server-cli").create(process.stdout, process.stderr, {
+    missionStatement: "Server for automating JavaScript test runs across browsers",
+    description: "buster-server [options]"
+}).run(process.argv.slice(2));
