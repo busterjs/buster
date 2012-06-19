@@ -18,7 +18,7 @@ testCli.create(process.stdout, process.stderr, {
     extensions: {
         browser: [{
             configure: function (configuration) { loadTestFramework(configuration); }
-        }]
+        }, require("buster-syntax").create({ ignoreReferenceErrors: true })]
     }
 }).run(process.argv.slice(2));
 
