@@ -3,7 +3,7 @@
 var fs = require("fs");
 var childProcess = require("child_process");
 
-var argv = Array.prototype.slice.call(process.argv).slice(2)
+var argv = Array.prototype.slice.call(process.argv).slice(2);
 
 if (argv.length == 0 || argv[0] == "--help" || argv[0] == "-h") {
     printHelp();
@@ -30,7 +30,7 @@ function printHelp() {
 
 function printVersions() {
     var version = JSON.parse(fs.readFileSync(__dirname + "/../package.json")).version;
-    console.log("Buster.JS version " + version + " beta3");
+    console.log("Buster.JS version " + version + " Beta 4");
 }
 
 function runBusterCmd(cmd) {
