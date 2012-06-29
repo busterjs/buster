@@ -1,5 +1,5 @@
 var system = require('system'),
-    captureUrl = 'http://localhost:1111/capture/';
+    captureUrl = 'http://localhost:1111/capture';
 if (system.args.length==2) {
     captureUrl = system.args[1];
 }
