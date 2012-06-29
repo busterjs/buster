@@ -9,8 +9,12 @@ phantom.silent = false;
 var page = new WebPage();
 
 page.open(captureUrl, function(status) {
-  if(!phantom.silent){
+  if(!phantom.silent) {
     console.log(status);
+    if (status !== 'success') {
+      console.log('phantomjs failed to connect');
+      phantom.exit(1);
+    }
 
     page.onConsoleMessage = function (msg, line, id) {
       var fileName = id.split('/');
