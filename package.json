@@ -41,7 +41,7 @@
         "buster-autotest": ">=0.2.0",
         "buster-static": ">=0.5",
         "buster-syntax": "~0.4",
-        "when": "~1.3"
+        "when": "https://github.com/cujojs/when/tarball/1.3.0"
     },
     "devDependencies": {
         "uglify-js": "~1.2.5",
