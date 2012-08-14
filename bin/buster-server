@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
 require("buster-server-cli").create(process.stdout, process.stderr, {
-    missionStatement: "Server for automating JavaScript test runs across browsers",
-    description: "buster-server [options]"
+    name: "Buster.<span>JS</span>",
+    binary: "buster-server",
+    description: "buster-server [options]",
+    missionStatement: "Server for automating Buster.JS test runs across browsers",
+    unexpectedErrorMessage: "Something went horribly wrong. This is most likely " +
+                            "a bug, please report at\n" +
+                            "http://github.com/busterjs/buster/issues\n"
 }).run(process.argv.slice(2));

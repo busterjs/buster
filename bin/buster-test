@@ -7,7 +7,6 @@ process.on("uncaughtException", function (err) {
 });
 
 var busterPath = path.join(__dirname, "..", "lib", "buster");
-var frameworkExt = path.join(busterPath, "framework-extension");
 
 testCli.create(process.stdout, process.stderr, {
     missionStatement: "Run Buster.JS tests on node, in browsers, or both",
@@ -19,23 +18,14 @@ testCli.create(process.stdout, process.stderr, {
     ].join("\n"),
     environmentVariable: "BUSTER_TEST_OPT",
     runners: testCli.runners,
+    configBaseName: "buster",
     extensions: {
         browser: [
-            require(frameworkExt),
-            { configure: function (config) { loadWiring(config); } },
+            require(path.join(busterPath, "framework-extension")),
+            require(path.join(busterPath, "wiring-extension")),
             require("buster-syntax").create({ ignoreReferenceErrors: true })
         ]
     }
 }).run(process.argv.slice(2), function (err) {
     if (err) { process.exit(1); }
 });
-
-function loadWiring(configuration) {
-    configuration.on("load:framework", function (rs) {
-        rs.addFileResource(path.join(busterPath, "capture-server-wiring.js"), {
-            path: "/buster/capture-server-wiring.js"
-        }).then(function () {
-            rs.loadPath.append("/buster/capture-server-wiring.js");
-        });
-    });
-}

@@ -48,7 +48,7 @@ function runBusterCmd(cmd) {
             } else {
                 var mod = stdout.split("\n")[0];
 
-                var run = childProcess.spawn(mod, argv, {env: process.env, setsid: true});
+                var run = childProcess.spawn(mod, argv, { env: process.env, setsid: true });
                 run.stdout.on('data', function (data) {
                     process.stdout.write(data);
                 });
