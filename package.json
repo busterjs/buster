@@ -37,7 +37,7 @@
         "buster-test": ">=0.6.1",
         "buster-sinon": ">=0.6.0",
         "buster-test-cli": ">=0.6.2",
-        "buster-server-cli": ">=0.1.0",
+        "buster-server-cli": "=0.1.0",
         "buster-autotest": ">=0.2.0",
         "buster-static": ">=0.5",
         "buster-syntax": "~0.4",
