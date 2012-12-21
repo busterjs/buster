@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.6.3",
+    "version": "0.6.6",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -36,7 +36,7 @@
         "sinon": ">=1.4",
         "buster-test": ">=0.6.1",
         "buster-sinon": ">=0.6.0",
-        "buster-test-cli": ">=0.7.0",
+        "buster-test-cli": ">=0.7.1",
         "buster-server-cli": ">=0.2.0",
         "buster-autotest": ">=0.2.0",
         "buster-static": ">=0.5",
