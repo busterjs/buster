@@ -1,19 +1,19 @@
-var system = require('system'),
-    captureUrl = 'http://localhost:1111/capture';
+var page = require('webpage').create();
+var system = require('system');
+var captureUrl = 'http://localhost:1111/capture';
+
 if (system.args.length==2) {
     captureUrl = system.args[1];
 }
 
 phantom.silent = false;
 
-var page = new WebPage();
-
 page.open(captureUrl, function(status) {
   if(!phantom.silent) {
     console.log(status);
     if (status !== 'success') {
       console.log('phantomjs failed to connect');
-      phantom.exit(1);
+      phantom.exit();
     }
 
     page.onConsoleMessage = function (msg, line, id) {
