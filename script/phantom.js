@@ -13,7 +13,7 @@ page.open(captureUrl, function(status) {
     console.log(status);
     if (status !== 'success') {
       console.log('phantomjs failed to connect');
-      phantom.exit();
+      phantom.exit(1);
     }
 
     page.onConsoleMessage = function (msg, line, id) {
