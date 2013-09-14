@@ -1,5 +1,6 @@
 var buster = require("../lib/buster");
 var assert = buster.assert;
+var refute = buster.refute;
 
 buster.testCase("Buster integration test", {
     "should count sinon assertions": function (done) {
@@ -16,18 +17,11 @@ buster.testCase("Buster integration test", {
 
         var runner = buster.testRunner.create();
 
-        runner.on("suite:end", function (results) {
+        runner.on("suite:end", done(function (results) {
             assert.equals(results.assertions, 2);
-            done();
-        });
+        }));
 
         runner.runSuite([testCase]);
-    },
-
-    "should add console to runner": function () {
-        var runner = buster.testRunner.create();
-
-        assert.same(runner.console, buster.console);
     },
 
     "should expose console.log as this.log in tests": function (done) {
@@ -48,20 +42,27 @@ buster.testCase("Buster integration test", {
     },
 
     "should fail when no exception": function () {
-        this.stub(buster.assertions, "emit");
+        this.stub(buster.referee, "emit");
 
         try {
-            buster.assertions.throwOnFailure = true;
+            buster.referee.throwOnFailure = true;
             assert.exception(function () {});
             throw new Error("Didn't throw");
         } catch (e) {
-            buster.assertions.emit.restore();
+            buster.referee.emit.restore();
             refute.match(e.message, "Didn't throw");
             refute.match(e.message, "toString");
         } finally {
-            if (buster.assertions.emit.restore) {
-                buster.assertions.emit.restore();
+            if (buster.referee.emit.restore) {
+                buster.referee.emit.restore();
             }
         }
+    },
+
+    "should not expose global objects and functions": function () {
+        refute.defined(global.buster);
+        refute.defined(global.assert);
+        refute.defined(global.refute);
+        refute.defined(global.expect);
     }
 });

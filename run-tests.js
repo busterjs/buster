@@ -1,3 +1,1 @@
-#!/usr/bin/env node
-
 require("./test/buster-test.js");

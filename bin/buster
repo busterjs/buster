@@ -28,5 +28,5 @@ function printHelp() {
 
 function printVersions() {
     var version = JSON.parse(fs.readFileSync(__dirname + "/../package.json")).version;
-    console.log("Buster.JS version " + version + " Beta 4");
+    console.log("Buster.JS version " + version + " Beta 5");
 }
