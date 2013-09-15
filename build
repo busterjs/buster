@@ -18,8 +18,9 @@ function minify(script) {
 }
 
 function wrap(script) {
-    return "(function () { var when; function define(cb) { when = cb(); } " +
-        script + ";return buster; }());";
+    // return "(function () { var when; function define(cb) { when = cb(); } " +
+    //     script + ";return buster; }());";
+    return script;
 }
 
 function finish() {
@@ -43,37 +44,44 @@ function finish() {
 
 var fileNames = [
     "when/when",
-    "buster-core/lib/buster-core",
-    "buster-core/lib/buster-event-emitter",
-    "buster-evented-logger/lib/buster-evented-logger",
-    "buster-assertions/lib/buster-assertions",
-    "buster-assertions/lib/buster-assertions/expect",
-    "buster-format/lib/buster-format",
-    "sinon/lib/sinon.js",
-    "sinon/lib/sinon/spy.js",
-    "sinon/lib/sinon/stub.js",
-    "sinon/lib/sinon/mock.js",
-    "sinon/lib/sinon/collection.js",
-    "sinon/lib/sinon/sandbox.js",
-    "sinon/lib/sinon/test.js",
-    "sinon/lib/sinon/test_case.js",
-    "sinon/lib/sinon/assert.js",
-    "sinon/lib/sinon/util/event.js",
-    "sinon/lib/sinon/util/fake_xml_http_request.js",
-    "sinon/lib/sinon/util/fake_timers.js",
-    "sinon/lib/sinon/util/fake_server.js",
-    "sinon/lib/sinon/util/fake_server_with_clock.js",
-    "buster-test/lib/buster-test/stack-filter",
-    "buster-test/lib/buster-test/test-context",
-    "buster-test/lib/buster-test/spec",
-    "buster-test/lib/buster-test/test-case",
-    "buster-test/lib/buster-test/test-runner",
-    "buster-test/lib/buster-test/reporters",
-    "buster-test/lib/buster-test/reporters/html",
-    "buster-test/lib/buster-test/auto-run",
-    "buster-test/lib/buster-test",
+    "lodash/lodash",
+    "async/lib/async",
+    "platform/platform",
+    "lib/buster/amd-shim.js",
+    "bane/lib/bane",
+    "samsam/lib/samsam",
+    "evented-logger/lib/evented-logger",
+    "referee/lib/referee",
+    "referee/lib/expect",
+    "formatio/lib/formatio",
+    "stack-filter/lib/stack-filter",
+    "sinon/lib/sinon",
+    "sinon/lib/sinon/spy",
+    "sinon/lib/sinon/call",
+    "sinon/lib/sinon/stub",
+    "sinon/lib/sinon/mock",
+    "sinon/lib/sinon/collection",
+    "sinon/lib/sinon/sandbox",
+    "sinon/lib/sinon/match",
+    "sinon/lib/sinon/util/event",
+    "sinon/lib/sinon/util/fake_xml_http_request",
+    "sinon/lib/sinon/util/fake_timers",
+    "sinon/lib/sinon/util/fake_server",
+    "sinon/lib/sinon/util/fake_server_with_clock",
+    "buster-test/lib/seedrandom",
+    "buster-test/lib/browser-env",
+    "buster-test/lib/test-context",
+    "buster-test/lib/spec",
+    "buster-test/lib/test-case",
+    "buster-test/lib/test-runner",
+    "buster-test/lib/reporters/runtime-throttler",
+    "buster-test/lib/reporters/html",
+    "buster-test/lib/reporters",
+    "buster-test/lib/auto-run",
+    "referee-sinon/lib/referee-sinon",
     "buster-sinon/lib/buster-sinon",
     "lib/buster/buster-wiring.js",
+    "lib/buster/browser-wiring.js",
     "lib/buster.js"];
 
 fileNames.forEach(function (fileName, i) {
