@@ -13,6 +13,10 @@
         "name": "Christian Johansen",
         "email": "christian@cjohansen.no",
         "url": "http://cjohansen.no"
+    }, {
+        "name": "Daniel Wittner",
+        "email": "d.wittner@gmx.de",
+        "url": "https://github.com/dwittner"
     }],
     "repository": {
         "type": "git",
