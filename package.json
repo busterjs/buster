@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -33,23 +33,23 @@
         "test": "node run-tests.js"
     },
     "dependencies": {
-        "bane": "",
-        "evented-logger": ">=0.5",
-        "referee": ">=0.11.1",
-        "formatio": ">=0.6",
-        "sinon": ">=1.7",
-        "buster-test": ">=0.7",
-        "buster-sinon": ">=0.7",
-        "referee-sinon": ">=0.1",
-        "buster-test-cli": ">=0.7",
-        "buster-server-cli": ">=0.2.1",
-        "buster-autotest": ">=0.2.0",
-        "buster-syntax": ">=0.4.2",
+        "bane": "~1.0",
+        "evented-logger": "~1.0",
+        "referee": "~1.0",
+        "formatio": "~1.0",
+        "sinon": "~1.7",
+        "buster-test": "~0.7",
+        "buster-sinon": "~0.7",
+        "referee-sinon": "~1.0",
+        "buster-test-cli": "~0.8",
+        "buster-server-cli": "~0.3",
+        "buster-autotest": "~0.2.0",
+        "buster-syntax": "~0.4.2",
         "when": "https://github.com/cujojs/when/tarball/1.8.1",
         "lodash": "~1.0",
         "async": "~0.2",
         "platform": "~1.0",
-        "stack-filter": "~0.2"
+        "stack-filter": "~1.0"
     },
     "devDependencies": {
         "uglify-js": "~1.2.5"
