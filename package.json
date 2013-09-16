@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -37,7 +37,7 @@
         "evented-logger": "~1.0",
         "referee": "~1.0",
         "formatio": "~1.0",
-        "sinon": "~1.7",
+        "sinon": "=1.7.3",
         "buster-test": "~0.7",
         "buster-sinon": "~0.7",
         "referee-sinon": "~1.0",
@@ -49,7 +49,8 @@
         "lodash": "~1.0",
         "async": "~0.2",
         "platform": "~1.0",
-        "stack-filter": "~1.0"
+        "stack-filter": "~1.0",
+        "samsam": "~1.0"
     },
     "devDependencies": {
         "uglify-js": "~1.2.5"
