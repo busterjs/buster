@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var fs = require("fs");
+var path = require("path");
 
 if (!fs.watch) {
     console.log("Your system does not support fs.watch");
@@ -11,7 +12,13 @@ if (!fs.watch) {
 var autotest = require("buster-autotest");
 var argv = process.argv.slice(2);
 var cwd = process.cwd();
-autotest.watch(cwd, { argv: argv, cmd: __dirname + "/buster-test" });
+var command = __dirname + "/buster-test";
+
+if (command.indexOf(cwd) >= 0) {
+    command = "./" + path.relative(cwd, command);
+}
+
+autotest.watch(cwd, { argv: argv, cmd: command });
 console.log("Watching", cwd);
 console.log("Test command:");
 console.log("    buster-test", argv.join(" "), "\n");
