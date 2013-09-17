@@ -11,7 +11,7 @@ if (!fs.watch) {
 var autotest = require("buster-autotest");
 var argv = process.argv.slice(2);
 var cwd = process.cwd();
-autotest.watch(cwd, { argv: argv });
+autotest.watch(cwd, { argv: argv, cmd: __dirname + "/buster-test" });
 console.log("Watching", cwd);
 console.log("Test command:");
 console.log("    buster-test", argv.join(" "), "\n");
