@@ -43,6 +43,7 @@
         "referee-sinon": "~1.0",
         "buster-test-cli": "~0.8",
         "buster-server-cli": "~0.3",
+        "buster-static": "~0.6",
         "buster-autotest": "~0.2.0",
         "buster-syntax": "~0.4.2",
         "when": "https://github.com/cujojs/when/tarball/1.8.1",
