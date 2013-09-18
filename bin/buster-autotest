@@ -12,14 +12,14 @@ if (!fs.watch) {
 var autotest = require("buster-autotest");
 var argv = process.argv.slice(2);
 var cwd = process.cwd();
-var command = __dirname + "/buster-test";
+var command = path.join(__dirname, "buster-test");
 
 if (command.indexOf(cwd) >= 0) {
-    command = "./" + path.relative(cwd, command);
+    command = path.relative(cwd, command);
 }
 
 autotest.watch(cwd, { argv: argv, cmd: command });
 console.log("Watching", cwd);
 console.log("Test command:");
-console.log("    buster-test", argv.join(" "), "\n");
+console.log("   ", command, argv.join(" "), "\n");
 console.log("Have fun!");
