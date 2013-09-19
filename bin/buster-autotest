@@ -9,9 +9,10 @@ if (!fs.watch) {
 }
 
 var autotest = require("buster-autotest");
-var argv = process.argv.slice(2);
 var cwd = process.cwd();
-var cmd = process.argv[1].replace("autotest", "test");
+var cmd = "node";
+var argv = process.argv.slice(2);
+argv.unshift(process.argv[1].replace("autotest", "test"));
 
 autotest.watch(cwd, { argv: argv, cmd: cmd });
 console.log("Watching", cwd);
