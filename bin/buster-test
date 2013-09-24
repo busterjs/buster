@@ -27,5 +27,5 @@ testCli.create(process.stdout, process.stderr, {
         ]
     }
 }).run(process.argv.slice(2), function (err) {
-    if (err) { process.exit(1); }
+    if (err) { setTimeout(process.exit.bind(null, 1), 5); }
 });
