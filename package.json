@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.6",
+    "version": "0.7.7",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -51,7 +51,7 @@
         "async": "~0.2",
         "platform": "~1.0",
         "stack-filter": "~1.0",
-        "samsam": "~1.0"
+        "samsam": "~1.1"
     },
     "devDependencies": {
         "uglify-js": "~1.2.5"
