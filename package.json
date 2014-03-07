@@ -20,7 +20,7 @@
     }],
     "repository": {
         "type": "git",
-        "url": "git://gitorious.org/buster/buster.git"
+        "url": "https://github.com/busterjs/buster.git"
     },
     "bin": {
         "buster": "./bin/buster",
