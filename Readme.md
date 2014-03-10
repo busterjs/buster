@@ -33,9 +33,9 @@ Meta package wiring together all Buster submodules
 
 
 ### Extension modules (in alphabetical order) ###
-* [buster-amd](https://github.com/busterjs/buster-amd)
-* [buster-coffee](https://github.com/busterjs/buster-coffee)
-* [buster-html-doc](https://github.com/busterjs/buster-html-doc)
-* [buster-jstestdriver](https://github.com/busterjs/buster-jstestdriver)
-* [buster-lint](https://github.com/busterjs/buster-lint)
-* [buster-syntax](https://github.com/busterjs/buster-syntax)
+* [buster-amd](https://github.com/busterjs/buster-amd) [![Build status](https://secure.travis-ci.org/busterjs/buster-amd.png?branch=master)](http://travis-ci.org/busterjs/buster-amd)
+* [buster-coffee](https://github.com/busterjs/buster-coffee) [![Build status](https://secure.travis-ci.org/busterjs/buster-coffee.png?branch=master)](http://travis-ci.org/busterjs/buster-coffee)
+* [buster-html-doc](https://github.com/busterjs/buster-html-doc) [![Build status](https://secure.travis-ci.org/busterjs/buster-html-doc.png?branch=master)](http://travis-ci.org/busterjs/buster-html-doc)
+* [buster-jstestdriver](https://github.com/busterjs/buster-jstestdriver) [![Build status](https://secure.travis-ci.org/busterjs/buster-jstestdriver.png?branch=master)](http://travis-ci.org/busterjs/buster-jstestdriver)
+* [buster-lint](https://github.com/busterjs/buster-lint) [![Build status](https://secure.travis-ci.org/busterjs/buster-lint.png?branch=master)](http://travis-ci.org/busterjs/buster-lint)
+* [buster-syntax](https://github.com/busterjs/buster-syntax) [![Build status](https://secure.travis-ci.org/busterjs/buster-syntax.png?branch=master)](http://travis-ci.org/busterjs/buster-syntax)
