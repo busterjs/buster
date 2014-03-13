@@ -2,7 +2,10 @@
 
 [![Build status](https://secure.travis-ci.org/busterjs/buster.png?branch=master)](http://travis-ci.org/busterjs/buster)
 
-Meta package wiring together all Buster submodules
+Meta package, which wires together all Buster.JS submodules.
+
+* [Documentation](http://docs.busterjs.org/en/latest/)
+* [Changelog](http://docs.busterjs.org/en/latest/changelog/)
 
 
 ### Core modules (in alphabetical order) ###
@@ -27,6 +30,7 @@ Meta package wiring together all Buster submodules
 * [ramp](https://github.com/busterjs/ramp) [![Build status](https://secure.travis-ci.org/busterjs/ramp.png?branch=master)](http://travis-ci.org/busterjs/ramp)
 * [ramp-resources](https://github.com/busterjs/ramp-resources) [![Build status](https://secure.travis-ci.org/busterjs/ramp-resources.png?branch=master)](http://travis-ci.org/busterjs/ramp-resources)
 * [referee](https://github.com/busterjs/referee) [![Build status](https://secure.travis-ci.org/busterjs/referee.png?branch=master)](http://travis-ci.org/busterjs/referee)
+* [referee-sinon](https://github.com/busterjs/referee-sinon) [![Build status](https://secure.travis-ci.org/busterjs/referee-sinon.png?branch=master)](http://travis-ci.org/busterjs/referee-sinon)
 * [samsam](https://github.com/busterjs/samsam) [![Build status](https://secure.travis-ci.org/busterjs/samsam.png?branch=master)](http://travis-ci.org/busterjs/samsam)
 * [stack-filter](https://github.com/busterjs/stack-filter) [![Build status](https://secure.travis-ci.org/busterjs/stack-filter.png?branch=master)](http://travis-ci.org/busterjs/stack-filter)
 * [stream-logger](https://github.com/busterjs/stream-logger) [![Build status](https://secure.travis-ci.org/busterjs/stream-logger.png?branch=master)](http://travis-ci.org/busterjs/stream-logger)
