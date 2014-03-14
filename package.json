@@ -30,7 +30,8 @@
         "buster-static": "./bin/buster-static"
     },
     "scripts": {
-        "test": "node run-tests.js"
+        "test": "node run-tests.js",
+        "test-debug": "node --debug-brk run-tests.js"
     },
     "dependencies": {
         "bane": "~1.0",
