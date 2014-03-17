@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.8",
+    "version": "0.7.9",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
