@@ -7,6 +7,8 @@ Meta package, which wires together all Buster.JS submodules.
 * [Documentation](http://docs.busterjs.org/en/latest/)
 * [Changelog](http://docs.busterjs.org/en/latest/changelog/)
 
+> Want to support Buster.JS development? [Here](http://docs.busterjs.org/en/latest/developers/) you get useful information.
+
 
 ### Core modules (in alphabetical order) ###
 
