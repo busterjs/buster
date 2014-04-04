@@ -38,7 +38,7 @@
         "evented-logger": "~1.0",
         "referee": "~1.0",
         "formatio": "~1.0",
-        "sinon": "=1.7.3",
+        "sinon": "~1.9",
         "buster-test": "~0.7",
         "buster-sinon": "~0.7",
         "referee-sinon": "~1.0",
