@@ -8,7 +8,7 @@ for /F %%x in ('dir /B/D/AD') do (
   cd %%x
   if exist %cd%\%%x\args.txt (
     set /p args= < args.txt
-    call buster-test !args!
+    call buster-test !args! %*
   ) else (
     call buster-test %*
   )
