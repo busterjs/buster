@@ -50,7 +50,7 @@
         "when": "https://github.com/cujojs/when/tarball/1.8.1",
         "lodash": "~1.0",
         "async": "~0.2",
-        "platform": "~1.0",
+        "platform": "~1.2",
         "stack-filter": "~1.0",
         "samsam": "~1.1"
     },
