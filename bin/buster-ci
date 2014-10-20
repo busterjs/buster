@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+process.on("uncaughtException", function (err) {
+    console.log(err.stack);
+});
+
+var path = require("path");
+
+var BusterCi = require("buster-ci");
+
+function loadConfig(fileName) {
+    var mod = path.resolve("", fileName);
+    try {
+        return require(mod);
+    } catch (e) {
+        if (e.message !== "Cannot find module '" + mod + "'") {
+            throw e;
+        }
+    }
+}
+
+var config = loadConfig("buster-ci.js");
+
+if (config) {
+	var busterCi = new BusterCi(config);
+	busterCi.run();
+} else {
+	console.log("Configuration file 'buster-ci.js' not found!");
+}
