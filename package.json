@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.15",
+    "version": "0.7.16",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -46,7 +46,7 @@
         "buster-test-cli": "~0.8",
         "buster-server-cli": "~0.3",
         "buster-static": "~0.6",
-        "buster-autotest": "~0.4",
+        "buster-autotest": "~0.5",
         "buster-ci": "~0.1",
         "buster-syntax": "~0.4.2",
         "when": "https://github.com/cujojs/when/tarball/1.8.1",

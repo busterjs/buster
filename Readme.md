@@ -16,6 +16,8 @@ Meta package, which wires together all Buster.JS submodules.
 * [bane](https://github.com/busterjs/bane) [![Build status](https://secure.travis-ci.org/busterjs/bane.png?branch=master)](http://travis-ci.org/busterjs/bane)
 * [buster-analyzer](https://github.com/busterjs/buster-analyzer) [![Build status](https://secure.travis-ci.org/busterjs/buster-analyzer.png?branch=master)](http://travis-ci.org/busterjs/buster-analyzer)
 * [buster-autotest](https://github.com/busterjs/buster-autotest) [![Build status](https://secure.travis-ci.org/busterjs/buster-autotest.png?branch=master)](http://travis-ci.org/busterjs/buster-autotest)
+* [buster-ci](https://github.com/busterjs/buster-ci) [![Build status](https://secure.travis-ci.org/busterjs/buster-ci.png?branch=master)](http://travis-ci.org/busterjs/buster-ci)
+* [buster-ci-agent](https://github.com/busterjs/buster-ci-agent) [![Build status](https://secure.travis-ci.org/busterjs/buster-ci-agent.png?branch=master)](http://travis-ci.org/busterjs/buster-ci-agent)
 * [buster-cli](https://github.com/busterjs/buster-cli) [![Build status](https://secure.travis-ci.org/busterjs/buster-cli.png?branch=master)](http://travis-ci.org/busterjs/buster-cli)
 * [buster-configuration](https://github.com/busterjs/buster-configuration) [![Build status](https://secure.travis-ci.org/busterjs/buster-configuration.png?branch=master)](http://travis-ci.org/busterjs/buster-configuration)
 * [buster-server-cli](https://github.com/busterjs/buster-server-cli) [![Build status](https://secure.travis-ci.org/busterjs/buster-server-cli.png?branch=master)](http://travis-ci.org/busterjs/buster-server-cli)
@@ -25,7 +27,6 @@ Meta package, which wires together all Buster.JS submodules.
 * [buster-test-cli](https://github.com/busterjs/buster-test-cli) [![Build status](https://secure.travis-ci.org/busterjs/buster-test-cli.png?branch=master)](http://travis-ci.org/busterjs/buster-test-cli)
 * [evented-logger](https://github.com/busterjs/evented-logger) [![Build status](https://secure.travis-ci.org/busterjs/evented-logger.png?branch=master)](http://travis-ci.org/busterjs/evented-logger)
 * [formatio](https://github.com/busterjs/formatio) [![Build status](https://secure.travis-ci.org/busterjs/formatio.png?branch=master)](http://travis-ci.org/busterjs/formatio)
-* [fs-watch-tree](https://github.com/busterjs/fs-watch-tree) [![Build status](https://secure.travis-ci.org/busterjs/fs-watch-tree.png?branch=master)](http://travis-ci.org/busterjs/fs-watch-tree)
 * [multi-glob](https://github.com/busterjs/multi-glob) [![Build status](https://secure.travis-ci.org/busterjs/multi-glob.png?branch=master)](http://travis-ci.org/busterjs/multi-glob)
 * [posix-argv-parser](https://github.com/busterjs/posix-argv-parser) [![Build status](https://secure.travis-ci.org/busterjs/posix-argv-parser.png?branch=master)](http://travis-ci.org/busterjs/posix-argv-parser)
 * [prefsink](https://github.com/busterjs/prefsink) [![Build status](https://secure.travis-ci.org/busterjs/prefsink.png?branch=master)](http://travis-ci.org/busterjs/prefsink)
@@ -39,6 +40,7 @@ Meta package, which wires together all Buster.JS submodules.
 
 
 ### Extension modules (in alphabetical order) ###
+
 * [buster-amd](https://github.com/busterjs/buster-amd) [![Build status](https://secure.travis-ci.org/busterjs/buster-amd.png?branch=master)](http://travis-ci.org/busterjs/buster-amd)
 * [buster-coffee](https://github.com/busterjs/buster-coffee) [![Build status](https://secure.travis-ci.org/busterjs/buster-coffee.png?branch=master)](http://travis-ci.org/busterjs/buster-coffee)
 * [buster-html-doc](https://github.com/busterjs/buster-html-doc) [![Build status](https://secure.travis-ci.org/busterjs/buster-html-doc.png?branch=master)](http://travis-ci.org/busterjs/buster-html-doc)
