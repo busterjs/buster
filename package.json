@@ -1,6 +1,6 @@
 {
     "name": "buster",
-    "version": "0.7.16",
+    "version": "0.7.17",
     "main": "./lib/buster",
     "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
     "homepage": "http://busterjs.org/",
@@ -37,7 +37,7 @@
     "dependencies": {
         "bane": "~1.0",
         "evented-logger": "~1.0",
-        "referee": "~1.0",
+        "referee": "~1.1",
         "formatio": "~1.0",
         "sinon": "~1.9",
         "buster-test": "~0.7",
