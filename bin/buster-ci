@@ -23,7 +23,7 @@ var config = loadConfig("buster-ci.js");
 
 if (config) {
 	var busterCi = new BusterCi(config);
-	busterCi.run();
+	busterCi.run(process.argv.slice(2));
 } else {
 	console.log("Configuration file 'buster-ci.js' not found!");
 }
