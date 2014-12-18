@@ -43,21 +43,23 @@ function finish() {
 }
 
 var fileNames = [
+    // buster/bundle-0.x.js
     "when/when",
-    "lodash/lodash",
+    "lodash/dist/lodash",
     "async/lib/async",
     "platform/platform",
     "lib/buster/amd-shim.js",
     "bane/lib/bane",
     "samsam/lib/samsam",
     "evented-logger/lib/evented-logger",
-    "referee/lib/referee",
     "referee/lib/expect",
+    "referee/lib/referee",
     "formatio/lib/formatio",
     "stack-filter/lib/stack-filter",
     "sinon/lib/sinon",
     "sinon/lib/sinon/spy",
     "sinon/lib/sinon/call",
+    "sinon/lib/sinon/behavior",
     "sinon/lib/sinon/stub",
     "sinon/lib/sinon/mock",
     "sinon/lib/sinon/collection",
@@ -74,15 +76,28 @@ var fileNames = [
     "buster-test/lib/spec",
     "buster-test/lib/test-case",
     "buster-test/lib/test-runner",
-    "buster-test/lib/reporters/runtime-throttler",
+    // "buster-test/lib/reporters/json-proxy",
     "buster-test/lib/reporters/html",
+    "buster-test/lib/reporters/html2",
     "buster-test/lib/reporters",
     "buster-test/lib/auto-run",
     "referee-sinon/lib/referee-sinon",
     "buster-sinon/lib/buster-sinon",
     "lib/buster/buster-wiring.js",
     "lib/buster/browser-wiring.js",
-    "lib/buster.js"];
+
+    // buster/compat-0.x.js
+    "sinon/lib/sinon/util/timers_ie",
+    "sinon/lib/sinon/util/xhr_ie",
+
+    // buster/buster-0.7.x.js
+    // "buster/expose-modules",
+    // "stack-filter/lib/stack-filter",
+    // "buster-test/lib/reporters/html",
+    // "buster-test/lib/reporters/html2"
+
+    "lib/buster.js"
+];
 
 fileNames.forEach(function (fileName, i) {
     try {
