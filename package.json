@@ -18,6 +18,7 @@
         "email": "d.wittner@gmx.de",
         "url": "https://github.com/dwittner"
     }],
+    "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
         "url": "https://github.com/busterjs/buster.git"
