@@ -36,6 +36,7 @@
         "test-debug": "node --debug-brk run-tests.js"
     },
     "dependencies": {
+        "cache-require-paths": "^0.1.2",
         "bane": "~1.0",
         "evented-logger": "~1.0",
         "referee": "~1.1",
