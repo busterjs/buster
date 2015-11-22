@@ -1,63 +1,69 @@
 {
-    "name": "buster",
-    "version": "0.7.18",
-    "main": "./lib/buster",
-    "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
-    "homepage": "http://busterjs.org/",
-    "author": { "name": "August Lilleaas and Christian Johansen" },
-    "contributors": [{
-        "name": "August Lilleaas",
-        "email": "august.lilleaas@gmail.com",
-        "url": "http://augustl.com"
-    }, {
-        "name": "Christian Johansen",
-        "email": "christian@cjohansen.no",
-        "url": "http://cjohansen.no"
-    }, {
-        "name": "Daniel Wittner",
-        "email": "d.wittner@gmx.de",
-        "url": "https://github.com/dwittner"
-    }],
-    "license": "BSD-3-Clause",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/busterjs/buster.git"
+  "name": "buster",
+  "version": "0.7.18",
+  "main": "./lib/buster",
+  "description": "Buster.JS JavaScript Test framework. Meta package that pieces together various sub-projects.",
+  "homepage": "http://busterjs.org/",
+  "author": {
+    "name": "August Lilleaas and Christian Johansen"
+  },
+  "contributors": [
+    {
+      "name": "August Lilleaas",
+      "email": "august.lilleaas@gmail.com",
+      "url": "http://augustl.com"
     },
-    "bin": {
-        "buster": "./bin/buster",
-        "buster-test": "./bin/buster-test",
-        "buster-server": "./bin/buster-server",
-        "buster-autotest": "./bin/buster-autotest",
-        "buster-static": "./bin/buster-static",
-        "buster-ci": "./bin/buster-ci"
+    {
+      "name": "Christian Johansen",
+      "email": "christian@cjohansen.no",
+      "url": "http://cjohansen.no"
     },
-    "scripts": {
-        "test": "node run-tests.js",
-        "test-debug": "node --debug-brk run-tests.js"
-    },
-    "dependencies": {
-        "bane": "1.x",
-        "evented-logger": "1.x",
-        "referee": "1.x",
-        "formatio": "1.x",
-        "sinon": "1.x",
-        "buster-test": "0.7.x",
-        "buster-sinon": "0.7.x",
-        "referee-sinon": "1.x",
-        "buster-test-cli": "0.8.x",
-        "buster-server-cli": "0.3.x",
-        "buster-static": "0.6.x",
-        "buster-autotest": "0.6.x",
-        "buster-ci": "0.2.x",
-        "buster-syntax": "0.4.x",
-        "when": "1.x",
-        "lodash": "1.x",
-        "async": "0.2.x",
-        "platform": "1.x",
-        "stack-filter": "1.x",
-        "samsam": "1.x"
-    },
-    "devDependencies": {
-        "uglify-js": "2.x"
+    {
+      "name": "Daniel Wittner",
+      "email": "d.wittner@gmx.de",
+      "url": "https://github.com/dwittner"
     }
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/busterjs/buster.git"
+  },
+  "bin": {
+    "buster": "./bin/buster",
+    "buster-test": "./bin/buster-test",
+    "buster-server": "./bin/buster-server",
+    "buster-autotest": "./bin/buster-autotest",
+    "buster-static": "./bin/buster-static",
+    "buster-ci": "./bin/buster-ci"
+  },
+  "scripts": {
+    "test": "node run-tests.js",
+    "test-debug": "node --debug-brk run-tests.js"
+  },
+  "dependencies": {
+    "async": "0.2.x",
+    "bane": "1.x",
+    "buster-autotest": "0.6.x",
+    "buster-ci": "https://github.com/busterjs/buster-ci.git#update-deps",
+    "buster-server-cli": "https://github.com/busterjs/buster-server-cli.git#update-deps",
+    "buster-sinon": "0.7.x",
+    "buster-static": "https://github.com/busterjs/buster-static.git#update-deps",
+    "buster-syntax": "0.4.x",
+    "buster-test": "https://github.com/busterjs/buster-test.git#update-deps",
+    "buster-test-cli": "https://github.com/busterjs/buster-test-cli.git#update-deps",
+    "evented-logger": "1.x",
+    "formatio": "1.x",
+    "lodash": "1.x",
+    "platform": "1.x",
+    "referee": "1.x",
+    "referee-sinon": "1.x",
+    "samsam": "1.x",
+    "sinon": "1.x",
+    "stack-filter": "1.x",
+    "when": "1.x"
+  },
+  "devDependencies": {
+    "uglify-js": "2.x"
+  }
 }
