@@ -36,28 +36,28 @@
         "test-debug": "node --debug-brk run-tests.js"
     },
     "dependencies": {
-        "bane": "~1.0",
-        "evented-logger": "~1.0",
-        "referee": "~1.1",
-        "formatio": "~1.0",
-        "sinon": "~1.9",
-        "buster-test": "~0.7",
-        "buster-sinon": "~0.7",
-        "referee-sinon": "~1.0",
-        "buster-test-cli": "~0.8",
-        "buster-server-cli": "~0.3",
-        "buster-static": "~0.6",
-        "buster-autotest": "~0.5",
-        "buster-ci": "~0.2",
-        "buster-syntax": "~0.4.2",
-        "when": "https://github.com/cujojs/when/tarball/1.8.1",
-        "lodash": "~1.0",
-        "async": "~0.2",
-        "platform": "~1.2",
-        "stack-filter": "~1.0",
-        "samsam": "~1.1"
+        "bane": "1.x",
+        "evented-logger": "1.x",
+        "referee": "1.x",
+        "formatio": "1.x",
+        "sinon": "1.x",
+        "buster-test": "0.7.x",
+        "buster-sinon": "0.7.x",
+        "referee-sinon": "1.x",
+        "buster-test-cli": "0.8.x",
+        "buster-server-cli": "0.3.x",
+        "buster-static": "0.6.x",
+        "buster-autotest": "0.6.x",
+        "buster-ci": "0.2.x",
+        "buster-syntax": "0.4.x",
+        "when": "1.x",
+        "lodash": "1.x",
+        "async": "0.2.x",
+        "platform": "1.x",
+        "stack-filter": "1.x",
+        "samsam": "1.x"
     },
     "devDependencies": {
-        "uglify-js": "~1.2.5"
+        "uglify-js": "2.x"
     }
 }
