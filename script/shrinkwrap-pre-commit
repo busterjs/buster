@@ -1,0 +1,17 @@
+#!/bin/bash -e
+
+# Taken from https://github.com/turadg/npm-shrinkwrap-git-hooks/blob/master/bin/hooks/pre-commit.sh
+
+# This ensures that dependencies are installed locally whenever merging a commit
+# that changed the shrinkwrap.
+
+function package_changes_staged {
+  ! git diff --cached  --quiet -- package.json
+}
+
+# update shrinkwrap when spec changes
+if package_changes_staged; then
+  echo "Running 'npm shrinkwrap' to match new package spec..." >&2
+  $(npm bin)/npm-shrinkwrap
+  git add npm-shrinkwrap.json
+fi
