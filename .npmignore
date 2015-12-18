@@ -1,5 +1,7 @@
 *.log
-.gitignore
-.npmignore
-doc
 node_modules
+resources/buster-test.js
+.idea
+.cache-require-paths.json
+
+doc
