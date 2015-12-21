@@ -38,7 +38,7 @@
     "buster-ci": "./bin/buster-ci"
   },
   "scripts": {
-    "test": "node run-tests.js",
+    "test": "node run-tests.js && node run-integration-tests.js",
     "test-debug": "node --debug-brk run-tests.js"
   },
   "dependencies": {
@@ -64,6 +64,9 @@
     "when": "1.x"
   },
   "devDependencies": {
+    "buster-amd": "0.3.x",
+    "buster-html-doc": "2.x",
+    "phantomjs": "1.x",
     "uglify-js": "2.x"
   }
 }

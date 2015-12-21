@@ -1,14 +1,23 @@
 environment:
   matrix:
   - nodejs_version: "0.10"
+    jsdom_version: "3"
   - nodejs_version: "0.12"
+    jsdom_version: "3"
   - nodejs_version: "4"
+    jsdom_version: "3"
+  - nodejs_version: "4"
+    jsdom_version: "7"
   - nodejs_version: "5"
+    jsdom_version: "3"
+  - nodejs_version: "5"
+    jsdom_version: "7"
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm install -g npm
-  - npm install
+  - npm i -g npm
+  - npm i jsdom@%jsdom_version%
+  - npm i
 
 test_script:
   - node --version

@@ -1,4 +1,4 @@
-var buster = require("buster");
+var buster = require("../../../..");
 var mod = require("../src/mod");
 var assert = buster.assert;
 var expect = buster.expect;
