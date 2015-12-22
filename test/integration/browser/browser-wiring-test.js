@@ -4,7 +4,7 @@
     }
 
     function setUp() {
-        this.runner = B.eventEmitter.create();
+        this.runner = B.bane.createEventEmitter();
         this.runner.runSuite = sinon.spy();
         this.bnt = B.nextTick;
         this.sandbox = sinon.sandbox.create();
@@ -19,7 +19,7 @@
         this.sandbox.restore();
     }
 
-    B.util.testCase("BrowserWiringLoggerTest", {
+    B.testCase("BrowserWiringLoggerTest", {
         setUp: setUp,
         tearDown: tearDown,
 
@@ -30,11 +30,11 @@
             B.wire.logger(this.runner);
             B.console.log("Hey man");
 
-            assert(listener.calledOnce);
+            B.referee.assert(listener.calledOnce);
         }
     });
 
-    B.util.testCase("BrowserWiringContextsTest", {
+    B.testCase("BrowserWiringContextsTest", {
         setUp: setUp,
         tearDown: tearDown,
 
@@ -42,27 +42,27 @@
             var contexts = B.wire.testContexts();
             B.testCase("Something", {});
 
-            assertEquals(contexts.length, 1);
-            assertEquals(contexts[0].name, "Something");
+            B.referee.assert.equals(contexts.length, 1);
+            B.referee.assert.equals(contexts[0].name, "Something");
         },
 
         "collects spec": function () {
             var contexts = B.wire.testContexts();
             B.spec.describe("Something", function () {});
 
-            assertEquals(contexts.length, 1);
-            assertEquals(contexts[0].name, "Something");
+            B.referee.assert.equals(contexts.length, 1);
+            B.referee.assert.equals(contexts[0].name, "Something");
         }
     });
 
-    B.util.testCase("BrowserWiringDocumentStateTest", {
+    B.testCase("BrowserWiringDocumentStateTest", {
         setUp: setUp,
         tearDown: tearDown,
 
         "should remove all script tags to avoid re-downloading scripts": function () {
             B.wire.documentState(this.runner);
 
-            assertEquals(document.getElementsByTagName("script").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("script").length, 0);
         },
 
         "should clear document when test succeeds": function () {
@@ -70,7 +70,7 @@
             document.body.appendChild(document.createElement("h1"));
             this.runner.emit("test:success", {});
 
-            assertEquals(document.getElementsByTagName("h1").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("h1").length, 0);
         },
 
         "should clear document when test fails": function () {
@@ -78,7 +78,7 @@
             document.body.appendChild(document.createElement("h1"));
             this.runner.emit("test:failure", {});
 
-            assertEquals(document.getElementsByTagName("h1").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("h1").length, 0);
         },
 
         "should clear document when test errors": function () {
@@ -86,7 +86,7 @@
             document.body.appendChild(document.createElement("h1"));
             this.runner.emit("test:error", {});
 
-            assertEquals(document.getElementsByTagName("h1").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("h1").length, 0);
         },
 
         "should clear document when test times out": function () {
@@ -94,7 +94,7 @@
             document.body.appendChild(document.createElement("h1"));
             this.runner.emit("test:timeout", {});
 
-            assertEquals(document.getElementsByTagName("h1").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("h1").length, 0);
         },
 
         "should use snapshot from suite:start": function () {
@@ -104,12 +104,12 @@
             document.body.appendChild(document.createElement("h2"));
             this.runner.emit("test:timeout", {});
 
-            assertEquals(document.getElementsByTagName("h1").length, 1);
-            assertEquals(document.getElementsByTagName("h2").length, 0);
+            B.referee.assert.equals(document.getElementsByTagName("h1").length, 1);
+            B.referee.assert.equals(document.getElementsByTagName("h2").length, 0);
         }
     });
 
-    B.util.testCase("BrowserWiringTestRunnerTest", {
+    B.testCase("BrowserWiringTestRunnerTest", {
         setUp: setUp,
         tearDown: tearDown,
 
@@ -123,8 +123,8 @@
             wire.ready({});
             wire.run();
 
-            assert(this.runner.runSuite.calledOnce);
-            assertEquals(this.runner.runSuite.args[0][0].length, 2);
+            B.referee.assert(this.runner.runSuite.calledOnce);
+            B.referee.assert.equals(this.runner.runSuite.args[0][0].length, 2);
         },
 
         "should copy config properties to test runner": function () {
@@ -133,7 +133,7 @@
             wire.ready({ timeout: 1200 });
             wire.run();
 
-            assertEquals(this.runner.timeout, 1200);
+            B.referee.assert.equals(this.runner.timeout, 1200);
         },
 
         "should run parsable context when ready": function () {
@@ -144,8 +144,8 @@
             wire.ready({});
             wire.run();
 
-            assertEquals(this.runner.runSuite.args[0][0].length, 1);
-            assertEquals(this.runner.runSuite.args[0][0][0].name, "Parsed");
+            B.referee.assert.equals(this.runner.runSuite.args[0][0].length, 1);
+            B.referee.assert.equals(this.runner.runSuite.args[0][0][0].name, "Parsed");
        },
 
         "should filter context before running": function () {
@@ -155,7 +155,7 @@
             wire.ready({ filters: ["Stuff"] });
             wire.run();
 
-            assertEquals(this.runner.runSuite.args[0][0].length, 0);
+            B.referee.assert.equals(this.runner.runSuite.args[0][0].length, 0);
        },
 
         "should capture console if configured to do so": function () {
@@ -165,7 +165,7 @@
             wire.ready({ captureConsole: true });
             wire.run();
 
-            assert(B.captureConsole.calledOnce);
+            B.referee.assert(B.captureConsole.calledOnce);
        },
 
         "should not capture console by default": function () {
@@ -175,7 +175,7 @@
             wire.ready({});
             wire.run();
 
-            assert(!B.captureConsole.called);
+            B.referee.assert(!B.captureConsole.called);
        },
 
         "should wire document state": function () {
@@ -185,7 +185,7 @@
             wire.ready({});
             wire.run();
 
-            assert(B.wire.documentState.calledOnce);
+            B.referee.assert(B.wire.documentState.calledOnce);
        },
 
         "should optionally not wire document state": function () {
@@ -195,7 +195,7 @@
             wire.ready({ resetDocument: false });
             wire.run();
 
-            assert(!B.wire.documentState.called);
+            B.referee.assert(!B.wire.documentState.called);
        },
 
         "should start automatically": function () {
@@ -203,7 +203,7 @@
 
             wire.ready({});
 
-            assert(this.runner.runSuite.calledOnce);
+            B.referee.assert(this.runner.runSuite.calledOnce);
        },
 
         "should not start automatically if autoRun: false": function () {
@@ -211,7 +211,7 @@
 
             wire.ready({ autoRun: false });
 
-            assert(!this.runner.runSuite.calledOnce);
+            B.referee.assert(!this.runner.runSuite.calledOnce);
        },
 
         "should start on run() if autoRun: false": function () {
@@ -220,7 +220,7 @@
             wire.ready({ autoRun: false });
             wire.run();
 
-            assert(this.runner.runSuite.calledOnce);
+            B.referee.assert(this.runner.runSuite.calledOnce);
        },
 
         "should not run if not ready": function () {
@@ -228,7 +228,7 @@
 
             wire.run();
 
-            assert(!this.runner.runSuite.calledOnce);
+            B.referee.assert(!this.runner.runSuite.calledOnce);
        },
 
         "should run when ready": function () {
@@ -237,7 +237,7 @@
             wire.run();
             wire.ready();
 
-            assert(this.runner.runSuite.calledOnce);
+            B.referee.assert(this.runner.runSuite.calledOnce);
        },
 
         "should receive config when running before ready": function () {
@@ -247,7 +247,7 @@
             wire.run();
             wire.ready({ captureConsole: true });
 
-            assert(B.captureConsole.calledOnce);
+            B.referee.assert(B.captureConsole.calledOnce);
        },
 
         "should defer creating test runner": function () {
@@ -259,11 +259,11 @@
             wire.run();
             wire.ready({});
 
-            assert(runSuite.calledOnce);
+            B.referee.assert(runSuite.calledOnce);
        }
     });
 
-    B.util.testCase("BrowserWireTest", {
+    B.testCase("BrowserWireTest", {
         setUp: setUp,
         tearDown: tearDown,
 
@@ -272,7 +272,7 @@
             B.ready();
             B.run();
 
-            assert(this.runner.runSuite.calledOnce);
+            B.referee.assert(this.runner.runSuite.calledOnce);
         }
     });
 }(buster));
