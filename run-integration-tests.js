@@ -8,12 +8,21 @@ var cp = require('child_process');
 var BUSTER_SERVER_BIN = path.join(__dirname, "bin", "buster-server");
 var BUSTER_TEST_BIN = path.join(__dirname, "bin", "buster-test");
 
+function die(code) {
+    if (code > 0) {
+        console.error("Exiting with code " + code);
+    } else {
+        console.log("Exiting with code " + code);
+    }
+    process.exit(code);
+}
+
 function startServer() {
     var started = false;
     var serverExited = when.defer();
     var serverStarted = when.defer();
 
-    var serverProcess = cp.spawn(BUSTER_SERVER_BIN, ["-c"], {detached: true});
+    var serverProcess = cp.spawn("node", [BUSTER_SERVER_BIN, "-c"], {detached: true});
 
     serverProcess.stdout.on('data', function (data) {
         var msg = data.toString();
@@ -49,7 +58,12 @@ function startServer() {
         started: serverStarted.promise,
         exited: serverExited.promise,
         kill: function () {
-            process.kill(-serverProcess.pid);
+            var isWin = /^win/.test(process.platform);
+            if (isWin) {
+                cp.spawn("taskkill", ["/pid", serverProcess.pid, '/f', '/t']);
+            } else {
+                process.kill(-serverProcess.pid);
+            }
         }
     }
 }
@@ -109,9 +123,9 @@ function getRunTestFn(integrationTest) {
 function runIntegrationTests() {
     var server = startServer();
 
-    process.on('SIGINT', function() {
+    process.on('SIGINT', function () {
         server.kill();
-        process.exit();
+        die(1);
     });
 
     server.started
@@ -119,22 +133,39 @@ function runIntegrationTests() {
             return readTestFolders();
         })
         .then(function (tests) {
-            return sequence(tests.map(getRunTestFn));
+            var deferred = when.defer(); // @todo: replace with when.race()
+
+            sequence(tests.map(getRunTestFn))
+                .then(deferred.resolver.resolve);
+
+            server.exited
+                .then(function () {
+                    deferred.resolver.reject(new Error("Server exited before test results completed!"));
+                });
+
+            return deferred.promise;
         })
         .then(function (testResults) {
             server.kill();
             return when.all(testResults.concat(server.exited));
         })
         .then(function (exitCodes) {
-            var sum = exitCodes.reduce(function (c, i) {
-                return c + (i || 0);
-            }, 0);
-            process.exit(sum);
+            var nonZero = exitCodes.filter(function (i) {
+                return i > 0 && i !== 143
+            });
+
+            if (nonZero.length > 0) {
+                console.log("One or more processes exited with non-zero exit code", exitCodes);
+                die(1);
+                return;
+            }
+
+            die(0);
         })
         .then(null, function (err) {
             console.error(err);
             server.kill();
-            process.exit(1);
+            die(1);
         });
 }
 
