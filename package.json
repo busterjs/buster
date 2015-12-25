@@ -42,7 +42,7 @@
     "test-debug": "node --debug-brk run-tests.js"
   },
   "dependencies": {
-    "async": "0.2.x",
+    "async": "1.x",
     "bane": "1.x",
     "buster-autotest": "0.6.x",
     "buster-ci": "git://github.com/busterjs/buster-ci.git#update-deps",
@@ -54,14 +54,14 @@
     "buster-test-cli": "git://github.com/busterjs/buster-test-cli.git#update-deps",
     "evented-logger": "1.x",
     "formatio": "1.x",
-    "lodash": "1.x",
+    "lodash": "3.x",
     "platform": "1.x",
     "referee": "1.x",
     "referee-sinon": "1.x",
     "samsam": "1.x",
     "sinon": "1.x",
     "stack-filter": "1.x",
-    "when": "1.x"
+    "when": "3.x >=3.7.6"
   },
   "devDependencies": {
     "buster-amd": "0.3.x",
