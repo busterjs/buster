@@ -29,6 +29,5 @@ testCli.create(process.stdout, process.stderr, {
 }).run(process.argv.slice(2), function (err) {
     if (err) {
         console.error("buster-test run failed:", err.stack ? err.stack : err);
-        setTimeout(process.exit.bind(null, 1), 5);
     }
 });
