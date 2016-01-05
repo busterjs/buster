@@ -51,7 +51,7 @@
     "buster-static": "0.7.x",
     "buster-syntax": "0.5.x",
     "buster-test": "0.8.x",
-    "buster-test-cli": "git://github.com/busterjs/buster-test-cli.git#update-deps",
+    "buster-test-cli": "0.9.x",
     "evented-logger": "1.x",
     "formatio": "1.x",
     "lodash": "3.x",
