@@ -45,7 +45,7 @@
     "async": "1.x",
     "bane": "1.x",
     "buster-autotest": "0.6.x",
-    "buster-ci": "git://github.com/busterjs/buster-ci.git#update-deps",
+    "buster-ci": "0.3.x",
     "buster-server-cli": "0.4.x",
     "buster-sinon": "0.7.x",
     "buster-static": "0.7.x",
