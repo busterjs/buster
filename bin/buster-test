@@ -3,7 +3,7 @@ var path = require("path");
 var testCli = require("buster-test-cli");
 
 process.on("uncaughtException", function (err) {
-    console.log(err.stack);
+    console.error("Uncaught exception:", err.stack ? err.stack : err);
 });
 
 var busterPath = path.join(__dirname, "..", "lib", "buster");
@@ -27,5 +27,7 @@ testCli.create(process.stdout, process.stderr, {
         ]
     }
 }).run(process.argv.slice(2), function (err) {
-    if (err) { setTimeout(process.exit.bind(null, 1), 5); }
+    if (err) {
+        console.error("buster-test run failed:", err.stack ? err.stack : err);
+    }
 });

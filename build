@@ -44,8 +44,8 @@ function finish() {
 
 var fileNames = [
     // buster/bundle-0.x.js
-    "when/when",
-    "lodash/dist/lodash",
+    "when/dist/browser/when.js",
+    "lodash/index",
     "async/lib/async",
     "platform/platform",
     "lib/buster/amd-shim.js",

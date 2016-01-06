@@ -1,6 +1,6 @@
 *.log
 node_modules
-resources/buster-test.js
+# resources/buster-test.js # gitignored, but publishable
 .idea
 .cache-require-paths.json
 

@@ -1,5 +1,5 @@
 if (typeof module == "object" && typeof require == "function") {
-    var buster = require("buster");
+    var buster = require("../../..");
 }
 
 var assert = buster.assert;

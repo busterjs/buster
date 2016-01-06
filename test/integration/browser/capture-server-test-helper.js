@@ -1,8 +1,8 @@
 function createRemoteEmitter() {
-    var emitter = buster.eventEmitter.create();
+    var emitter = buster.bane.createEventEmitter();
 
     emitter.emit = function (event, data) {
-        return buster.eventEmitter.emit.call(this, event, {
+        return buster.emit.call(this, event, {
             data: data,
             topic: event
         });
