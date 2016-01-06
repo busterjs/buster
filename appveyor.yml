@@ -1,4 +1,5 @@
 environment:
+  NO_INTEGRATION: 1
   matrix:
   - nodejs_version: "0.10"
     jsdom_version: "3"

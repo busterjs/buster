@@ -1,3 +1,8 @@
+if (process.env["NO_INTEGRATION"]) {
+    console.log("Found NO_INTEGRATION environment variable - skipping tests");
+    process.exit(0);
+}
+
 var when = require('when');
 var path = require('path');
 var fs = require('fs');
