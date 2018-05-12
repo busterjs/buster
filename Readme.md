@@ -1,3 +1,9 @@
+# This project has been abandoned
+
+If anyone wants to take over maintenance, please get in touch with one of the organisation owners
+
+---
+
 # buster
 
 [![Build status](https://secure.travis-ci.org/busterjs/buster.png?branch=master)](http://travis-ci.org/busterjs/buster) [![Build status](https://ci.appveyor.com/api/projects/status/github/busterjs/buster?branch=master&svg=true)](https://ci.appveyor.com/project/dominykas/buster)
